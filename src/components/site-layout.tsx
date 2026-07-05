@@ -1,6 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { Leaf, Phone, MapPin, Clock, Mail } from "lucide-react";
+import { Leaf, Phone, MapPin, Clock, Mail, Menu } from "lucide-react";
 import type { ReactNode } from "react";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -43,6 +45,37 @@ export function SiteHeader() {
         >
           Book Visit
         </Link>
+        <div className="flex items-center gap-2 md:hidden">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" aria-label="Menu" className="md:hidden">
+                <Menu className="h-6 w-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+              <nav className="flex flex-col gap-6 mt-10">
+                {nav.map((n) => (
+                  <Link
+                    key={n.to}
+                    to={n.to}
+                    className="text-lg font-medium transition-colors hover:text-primary"
+                    activeProps={{ className: "text-primary" }}
+                    activeOptions={{ exact: n.to === "/" }}
+                  >
+                    {n.label}
+                  </Link>
+                ))}
+                <Link
+                  to="/appointment"
+                  className="mt-4 rounded-full bg-primary px-4 py-3 text-center text-sm font-medium text-primary-foreground shadow-soft transition-transform hover:scale-[1.02]"
+                >
+                  Book Visit
+                </Link>
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   );

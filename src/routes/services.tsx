@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import { InteractiveHoverText } from "@/components/interactive-hover-text";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { ArrowRight, Sparkles, Droplets, Brain, Wind, HeartPulse, Sprout, Baby, Flame, Activity } from "lucide-react";
 
 export const Route = createFileRoute("/services")({
@@ -125,7 +126,7 @@ function ServicesPage() {
 
 
 
-      <section className="container-page pb-4">
+      <section className="container-page pb-4 flex flex-col items-center text-center">
         <h2 className="text-2xl md:text-3xl">Conditions we treat</h2>
         <p className="mt-2 max-w-2xl text-muted-foreground">Areas of specialist focus — including new and old stubborn diseases.</p>
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -162,33 +163,32 @@ function ServicesPage() {
           </p>
         </div>
         
-        <div className="mt-12 overflow-hidden w-full">
-          <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory px-6 md:px-12 pb-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-            {panchakarmaGallery.map((item) => (
-              <div
-                key={item.name}
-                className="group relative flex-none w-[85vw] sm:w-[320px] md:w-[380px] snap-center overflow-hidden rounded-3xl border border-border bg-card shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <div className="relative h-72 sm:h-80 w-full overflow-hidden">
-                  <img
-                    src={item.img}
-                    alt={item.name + " Ayurvedic therapy at Shreeji Clinic"}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-0 left-0 p-6 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="text-white font-semibold text-2xl mb-2 drop-shadow-md">
-                      {item.name}
-                    </h3>
-                    <p className="text-sm text-white/90 leading-relaxed drop-shadow line-clamp-3">
-                      {item.desc}
-                    </p>
+        <div className="mt-12 w-full px-6 md:px-12 pb-8">
+          <Carousel opts={{ loop: true, align: "start" }} className="w-full">
+            <CarouselContent className="-ml-6">
+              {panchakarmaGallery.map((item) => (
+                <CarouselItem key={item.name} className="pl-6 basis-[85vw] sm:basis-[320px] md:basis-[380px]">
+                  <div className="group relative w-full h-72 sm:h-80 overflow-hidden rounded-3xl border border-border bg-card shadow-lg hover:shadow-xl transition-all duration-300">
+                    <img
+                      src={item.img}
+                      alt={item.name + " Ayurvedic therapy at Shreeji Clinic"}
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-0 left-0 p-6 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                      <h3 className="text-white font-semibold text-2xl mb-2 drop-shadow-md">
+                        {item.name}
+                      </h3>
+                      <p className="text-sm text-white/90 leading-relaxed drop-shadow line-clamp-3">
+                        {item.desc}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </div>
-            ))}
-          </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </section>
 
