@@ -6,10 +6,10 @@ import { ArrowRight, Leaf, ShieldCheck, Sparkles, HeartPulse, Sprout, Flame, Bad
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Shreeji Panchakarma Ayurvedic Center — Dr. Hiren H. Kalthiya, Surat" },
+      { title: "Shreeji Panchakarma Ayurvedic Center — Dr. Hiren Kalathiya, Surat" },
       { name: "description", content: "Authentic Ayurvedic treatment in Amroli, Surat. Specialist in skin, joint, hair, infertility and stubborn chronic diseases. Book your appointment online." },
       { property: "og:title", content: "Shreeji Panchakarma Ayurvedic Center — Surat" },
-      { property: "og:description", content: "Authentic Ayurvedic care led by Dr. Hiren H. Kalthiya. Panchakarma, skin, joints, hair, infertility, and chronic care." },
+      { property: "og:description", content: "Authentic Ayurvedic care led by Dr. Hiren Kalathiya. Panchakarma, skin, joints, hair, infertility, and chronic care." },
     ],
   }),
   component: HomePage,
@@ -37,7 +37,7 @@ function HomePage() {
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
               Welcome to Shreeji Panchakarma Ayurvedic Center in Amroli, Surat. Under the
-              guidance of Dr. Hiren H. Kalthiya (B.A.M.S., M.D.), we specialise in stubborn
+              guidance of Dr. Hiren Kalathiya (B.A.M.S., M.D.), we specialise in stubborn
               conditions where ordinary medicines fall short.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">

@@ -93,7 +93,7 @@ export function SiteFooter() {
             <span className="font-display text-lg">Shreeji Panchakarma Ayurvedic Center</span>
           </div>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
-            Authentic Ayurvedic care led by Dr. Hiren H. Kalthiya, B.A.M.S. M.D. (A.M.).
+            Authentic Ayurvedic care led by Dr. Hiren Kalathiya, B.A.M.S. M.D. (A.M.).
             Specialist in skin, joint, hair &amp; infertility, and stubborn chronic conditions.
           </p>
           <p className="mt-3 text-xs text-muted-foreground">Reg. No. G.B.I.-16877</p>

@@ -8,8 +8,8 @@ import { Clock, MapPin, Phone, Mail, Award } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Dr. Hiren Kalthiya — Shreeji Panchakarma Ayurvedic Center" },
-      { name: "description", content: "Meet Dr. Hiren H. Kalthiya, B.A.M.S. M.D. (A.M.), and learn about Shreeji Panchakarma Ayurvedic Center in Amroli, Surat — our story, values, and clinic timings." },
+      { title: "About Dr. Hiren Kalathiya — Shreeji Panchakarma Ayurvedic Center" },
+      { name: "description", content: "Meet Dr. Hiren Kalathiya, B.A.M.S. M.D. (A.M.), and learn about Shreeji Panchakarma Ayurvedic Center in Amroli, Surat — our story, values, and clinic timings." },
       { property: "og:title", content: "About — Shreeji Panchakarma Ayurvedic Center" },
       { property: "og:description", content: "Our story, mission, and the doctor behind authentic Ayurvedic care in Surat." },
     ],
@@ -41,7 +41,7 @@ function AboutPage() {
               <div className="absolute -inset-3 rounded-3xl bg-primary/10 blur-xl" aria-hidden />
               <img
                 src={doctorImg}
-                alt="Dr. Hiren H. Kalthiya"
+                alt="Dr. Hiren Kalathiya"
                 width={800}
                 height={800}
                 loading="lazy"
@@ -52,7 +52,7 @@ function AboutPage() {
               <div className="flex items-start gap-3">
                 <Award className="mt-0.5 h-6 w-6 text-primary" />
                 <div>
-                  <h3 className="text-lg">Dr. Hiren H. Kalthiya</h3>
+                  <h3 className="text-lg">Dr. Hiren Kalathiya</h3>
                   <p className="text-sm text-muted-foreground">B.A.M.S., M.D. (Ayurvedic Medicine)</p>
                   <p className="mt-1 text-xs text-muted-foreground">Reg. No. G.B.I.-16877</p>
                 </div>

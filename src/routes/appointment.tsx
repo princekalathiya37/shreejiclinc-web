@@ -9,7 +9,7 @@ export const Route = createFileRoute("/appointment")({
   head: () => ({
     meta: [
       { title: "Book an Appointment — Shreeji Panchakarma Ayurvedic Center" },
-      { name: "description", content: "Request an appointment with Dr. Hiren H. Kalthiya at Shreeji Panchakarma Ayurvedic Center, Amroli, Surat. Share your details and preferred time." },
+      { name: "description", content: "Request an appointment with Dr. Hiren Kalathiya at Shreeji Panchakarma Ayurvedic Center, Amroli, Surat. Share your details and preferred time." },
       { property: "og:title", content: "Book Appointment — Shreeji Ayurvedic Center" },
       { property: "og:description", content: "Online appointment booking for Ayurvedic consultation in Surat." },
     ],

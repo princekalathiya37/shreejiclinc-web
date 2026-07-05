@@ -119,7 +119,7 @@ function ServicesPage() {
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-muted-foreground">
             From everyday concerns to long-standing chronic conditions, our treatments are
-            personalised, classical, and led by Dr. Hiren H. Kalthiya.
+            personalised, classical, and led by Dr. Hiren Kalathiya.
           </p>
         </div>
       </section>
