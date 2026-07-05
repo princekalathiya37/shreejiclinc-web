@@ -168,9 +168,11 @@ export const Route = createFileRoute("/api/appointments")({
             return Response.json({ ok: false, error: "Could not save appointment" }, { status: 500 });
           }
 
-          // Fire WhatsApp and Telegram notifications (non-blocking — patient success unaffected if these fail)
-          notifyDoctorWhatsApp(d).catch(() => {});
-          notifyDoctorTelegram(d).catch(() => {});
+          // Await WhatsApp and Telegram notifications (Promise.allSettled prevents failure from blocking patient response)
+          await Promise.allSettled([
+            notifyDoctorWhatsApp(d),
+            notifyDoctorTelegram(d)
+          ]);
 
           return Response.json({ ok: true, id: data.id });
         } catch (e) {
